@@ -221,7 +221,7 @@ public class GodGK {
                                 if (ngayhomnay > player.CheckDayOnl) {
                                     player.CheckDayOnl = (byte)ngayhomnay;
                                     player.diemdanhtet = 0;
-                                    player.diemdanh = 0;
+                                    player.diemdanh = (byte)1;
                                     player.nhanban = 0;
                                 }
                             } catch (Exception e) {

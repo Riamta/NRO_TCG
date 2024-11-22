@@ -1784,7 +1784,7 @@ public class NpcFactory {
                                 "Chơi vui vẻ nhé con!"
                                         .replaceAll("%1", player.gender == ConstPlayer.TRAI_DAT ? "Quy lão Kamê"
                                                 : player.gender == ConstPlayer.NAMEC ? "Trưởng lão Guru" : "Vua Vegeta"),
-                                "Nhận\n 2000 Ngọc Xanh", "Nhập\nGiftcode");
+                                "Điểm Danh\n Nhận\n 30k Ngọc Xanh", "Nhập\nGiftcode");
                     }
                 }
                 // if (canOpenNpc(player)) {
@@ -1840,13 +1840,19 @@ public class NpcFactory {
 //                                }
 //                                break;
                             case 0:
-                                if (player.inventory.gem >= 5000) {
-                                    this.npcChat(player, "Dùng hết rồi hãy nhận tiếp nhé");
-                                    break;
-                                }
-                                player.inventory.gem +=5000;
+                            if (player.diemdanh == 1){
+                                player.diemdanh = 0;
+                                player.inventory.gem +=30000;
                                 Service.gI().sendMoney(player);
-                                Service.gI().sendThongBao(player, "Bạn vừa nhận được 5K Ngọc Xanh");
+                                Service.gI().sendThongBao(player, "Điểm danh thành công!\nNhận được 30k ngọc xanh");
+                            }
+                            else {
+                                Service.gI().sendThongBao(player, "Hôm nay con đã điểm danh rồi");
+                            }
+                                // if (player.inventory.gem >= 10000) {
+                                //     this.npcChat(player, "Dùng hết rồi hãy nhận tiếp nhé");
+                                //     break;
+                                // }
                                 break;
 //                            case 1:
 //                                this.createOtherMenu(player, 0, "|7|Kích Hoạt Tài Khoản\n"
@@ -6563,7 +6569,7 @@ public class NpcFactory {
             public void openBaseMenu(Player player) {
                 if (!TaskService.gI().checkDoneTaskTalkNpc(player, this)) {
                     if (canOpenNpc(player)) {
-                        if (this.mapId == 5) {
+                        if (this.mapId == 5 ) {
                             if (player.topnap > 0 || player.topnv > 0 || player.topsm > 0) {
                                 createOtherMenu(player, ConstNpc.BASE_MENU,
                                         "|2|Bạn đang sở hữu Top, hãy nhận thưởng ngay!!!", "Nhận Ngay");
