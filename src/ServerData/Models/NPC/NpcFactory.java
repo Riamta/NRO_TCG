@@ -1840,13 +1840,13 @@ public class NpcFactory {
 //                                }
 //                                break;
                             case 0:
-                                if (player.inventory.gem >= 2000) {
+                                if (player.inventory.gem >= 5000) {
                                     this.npcChat(player, "Dùng hết rồi hãy nhận tiếp nhé");
                                     break;
                                 }
-                                player.inventory.gem +=2000;
+                                player.inventory.gem +=5000;
                                 Service.gI().sendMoney(player);
-                                Service.gI().sendThongBao(player, "Bạn vừa nhận được 2K Ngọc Xanh");
+                                Service.gI().sendThongBao(player, "Bạn vừa nhận được 5K Ngọc Xanh");
                                 break;
 //                            case 1:
 //                                this.createOtherMenu(player, 0, "|7|Kích Hoạt Tài Khoản\n"
