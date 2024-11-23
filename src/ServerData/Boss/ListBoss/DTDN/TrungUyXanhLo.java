@@ -5,7 +5,7 @@ import ServerData.Boss.Boss;
 import Server.Data.Consts.ConstPlayer;
 import ServerData.Models.Map.ItemMap;
 import ServerData.Models.Map.Zone;
-import ServerData.Models.Map.ListMap.DoanhTrai;
+import ServerData.Models.Map.doanhtrai.DoanhTrai;
 import ServerData.Models.Player.Player;
 import ServerData.Models.Player.PlayerSkill.Skill;
 import ServerData.Services.EffectSkillService;

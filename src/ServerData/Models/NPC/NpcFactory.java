@@ -52,9 +52,9 @@ import ServerData.Models.Item.Item.ItemOption;
 import ServerData.Models.Map.Map;
 import ServerData.Models.Map.Zone;
 import ServerData.Models.Map.ListMap.NgocRongSaoDen;
+import ServerData.Models.Map.doanhtrai.DoanhTrai;
+import ServerData.Models.Map.doanhtrai.DoanhTraiService;
 import ServerData.Models.Map.ListMap.MapMaBu;
-import ServerData.Models.Map.ListMap.DoanhTrai;
-import ServerData.Models.Map.ListMap.DoanhTraiService;
 import ServerData.Models.Map.ListMap.KhiGasHuyDiet;
 import ServerData.Models.Map.ListMap.KhiGasHuyDietService;
 import ServerData.Models.Player.NPoint;
@@ -5788,7 +5788,7 @@ public class NpcFactory {
                     switch (player.iDMark.getIndexMenu()) {
                         case ConstNpc.MENU_JOIN_DOANH_TRAI:
                             if (select == 0) {
-                                DoanhTraiService.gI().opendoanhtrai(player);
+                                DoanhTraiService.gI().joinDoanhTrai(player);
                             } else if (select == 2) {
                                 NpcService.gI().createTutorial(player, this.avartar, ConstNpc.HUONG_DAN_DOANH_TRAI);
                             }

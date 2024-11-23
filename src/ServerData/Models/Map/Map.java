@@ -10,8 +10,9 @@ import ServerData.Models.Map.ListMap.MapMaBu;
 import ServerData.Models.Map.ListMap.BanDoKhoBau;
 import ServerData.Models.Map.ListMap.KhiGasHuyDiet;
 import ServerData.Models.Map.ListMap.NgocRongSaoDen;
-import ServerData.Models.Map.ListMap.DoanhTrai;
 import ServerData.Models.Map.Mob.Mob;
+import ServerData.Models.Map.doanhtrai.DoanhTrai;
+import ServerData.Models.Map.doanhtrai.DoanhTraiService;
 import ServerData.Models.NPC.Npc;
 import ServerData.Models.NPC.NpcFactory;
 import ServerData.Models.Player.Player;
@@ -105,7 +106,7 @@ public class Map implements Runnable {
             this.zones.add(zone);
             switch (this.type) {
                 case ConstMap.MAP_DOANH_TRAI:
-                    DoanhTrai.addZone(i, zone);
+                    DoanhTraiService.gI().addMapDoanhTrai(i, zone);
                     break;
                 case ConstMap.MAP_KHI_GA_HUY_DIET:
                     KhiGasHuyDiet.addZone(i, zone);

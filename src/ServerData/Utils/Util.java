@@ -75,7 +75,12 @@ public class Util {
         }
         return bossId;
     }
-
+    public static int trum(double a) {
+        if (a > 2123456789) {
+            a = 2123456789;
+        }
+        return (int) a;
+    }
     public static boolean contains(String[] arr, String key) {
         return Arrays.toString(arr).contains(key);
     }
