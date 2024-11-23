@@ -5,7 +5,8 @@
  */
 package ServerData.server;
 import ServerData.Server.Client;
-import ServerData.Server.Maintenance;
+import ServerData.Server.Maintenance.Maintenance;
+
 import java.util.concurrent.*;
 import java.util.concurrent.Callable;
 

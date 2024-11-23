@@ -5,7 +5,7 @@ import Server.Connect.PlayerDAO;
 import ServerData.Models.Player.Player;
 import com.girlkun.network.io.Message;
 import ServerData.Server.Client;
-import ServerData.Server.Maintenance;
+import ServerData.Server.Maintenance.Maintenance;
 import ServerData.Services.Service;
 import ServerData.Utils.Logger;
 import ServerData.Utils.TimeUtil;

@@ -3,6 +3,7 @@ package ServerData.Server;
 import ServerData.Services.Giftcode.GiftcodeManager;
 import com.girlkun.database.GirlkunDB;
 
+import java.io.IOException;
 import java.net.ServerSocket;
 
 import Server.Connect.HistoryTrade;
@@ -18,14 +19,12 @@ import com.girlkun.network.example.MessageSendCollect;
 import com.girlkun.network.server.GirlkunServer;
 import com.girlkun.network.server.ISessionAcceptHandler;
 import ServerData.Services.ClanService;
-//import ServerData.Services.NgocRongNamecService;
-//import ServerData.Services.Func.TaiXiu.ChonAiDay;
-//import ServerData.Services.Func.TaiXiu.TaiXiu_Old;
-import ServerData.Server.AuoBaoTri;
 import ServerData.Utils.GetSizeObject;
 import ServerData.Utils.Logger;
 import ServerData.Utils.TimeUtil;
 import ServerData.Models.Shop.ShopKyGuiManager;
+import ServerData.Server.Maintenance.Maintenance;
+
 import static ServerData.Server.Manager.MAPS;
 import ServerData.Services.MapService;
 import ServerData.Services.Service;
@@ -47,7 +46,8 @@ public class ServerManager {
 
     private static final long DELAY = 8000; // Thời gian delay là 8000ms (8 giây)
     private static final ScheduledExecutorService scheduler = Executors.newScheduledThreadPool(1);
-//    private static boolean isRunning = true; // Đặt isRunning theo nhu cầu của ứng dụng của bạn
+    // private static boolean isRunning = true; // Đặt isRunning theo nhu cầu của
+    // ứng dụng của bạn
 
     public static String timeStart;
 
@@ -75,6 +75,7 @@ public class ServerManager {
         }
         HistoryTrade.deleteHistory();
     }
+
     private long TimeTop;
 
     public static ServerManager gI() {
@@ -108,13 +109,12 @@ public class ServerManager {
         activeCommandLine();
         activeGame();
         activeServerSocket();
-//      TaiXiu_Old.gI().lastTimeEnd = System.currentTimeMillis() + 50000;
-        //new Thread(NauBanh.gI(), "NauBanh").start();
-//        new Thread(ChonAiDay.gI() , "CAD").start();
-//        new Thread(TaiXiu_Old.gI() , "TaiXiu").start();
-//        NgocRongNamecService.gI().initNgocRongNamec((byte)0);
-//        new Thread(NgocRongNamecService.gI() , "NRNM").start();
-        new Thread(AuoBaoTri.gI(), "AuoBaoTri").start();
+        // TaiXiu_Old.gI().lastTimeEnd = System.currentTimeMillis() + 50000;
+        // new Thread(NauBanh.gI(), "NauBanh").start();
+        // new Thread(ChonAiDay.gI() , "CAD").start();
+        // new Thread(TaiXiu_Old.gI() , "TaiXiu").start();
+        // NgocRongNamecService.gI().initNgocRongNamec((byte)0);
+        // new Thread(NgocRongNamecService.gI() , "NRNM").start();
         new Thread(() -> {
             while (isRunning) {
                 try {
@@ -134,7 +134,12 @@ public class ServerManager {
                     for (int i = 0; i < 75; i++) {
                         Boss b = BossManager.gI().bosses.get(i);
                         Thread.sleep(10000);
-                        if (b != null && !b.isDie() && b.zone != null && !MapService.gI().isMapMaBu(b.data[0].getMapJoin()[0]) && !MapService.gI().isMapBlackBallWar(b.data[0].getMapJoin()[0]) && !MapService.gI().isMapDoanhTrai(b.data[0].getMapJoin()[0]) && !MapService.gI().isMapConDuongRanDoc(b.data[0].getMapJoin()[0]) && !MapService.gI().isMapKhiGaHuyDiet(b.data[0].getMapJoin()[0])) {
+                        if (b != null && !b.isDie() && b.zone != null
+                                && !MapService.gI().isMapMaBu(b.data[0].getMapJoin()[0])
+                                && !MapService.gI().isMapBlackBallWar(b.data[0].getMapJoin()[0])
+                                && !MapService.gI().isMapDoanhTrai(b.data[0].getMapJoin()[0])
+                                && !MapService.gI().isMapConDuongRanDoc(b.data[0].getMapJoin()[0])
+                                && !MapService.gI().isMapKhiGaHuyDiet(b.data[0].getMapJoin()[0])) {
                             b.notifyJoinMap();
                         }
                     }
@@ -156,15 +161,15 @@ public class ServerManager {
             while (isRunning) {
                 try {
                     long start = System.currentTimeMillis();
-                    //ShopKyGuiManager.gI().save();
+                    // ShopKyGuiManager.gI().save();
                     MartialCongressManager.gI().update();
                     SieuHangManager.gI().update();
                     // Player player = null;
                     // for (int i = 0; i < Client.gI().getPlayers().size(); ++i) {
-                    //     if (Client.gI().getPlayers().get(i) != null) {
-                    //         player = (Client.gI().getPlayers().get(i));
-                    //         PlayerDAO.updatePlayer(player);
-                    //     }
+                    // if (Client.gI().getPlayers().get(i) != null) {
+                    // player = (Client.gI().getPlayers().get(i));
+                    // PlayerDAO.updatePlayer(player);
+                    // }
                     // }
 
                     long timeUpdate = System.currentTimeMillis() - start;
@@ -190,7 +195,8 @@ public class ServerManager {
                     is.dispose();
                     return;
                 }
-                is.setMessageHandler(Controller.getInstance()).setSendCollect(new MessageSendCollect()).setKeyHandler(new MyKeyHandler()).startCollect();
+                is.setMessageHandler(Controller.getInstance()).setSendCollect(new MessageSendCollect())
+                        .setKeyHandler(new MyKeyHandler()).startCollect();
             }
 
             @Override
@@ -248,8 +254,8 @@ public class ServerManager {
                 String line = sc.nextLine();
                 if (line.equals("baotri")) {
                     Maintenance.gI().start(20);
-//                } else if (line.equals("baotrinhanh")) {
-//                    Maintenance.gI().start(0);
+                    // } else if (line.equals("baotrinhanh")) {
+                    // Maintenance.gI().start(0);
                 } else if (line.equals("size")) {
                     System.out.println("Size List PLayer: " + GetSizeObject.sizeListPlayer());
                     System.out.println("Size List Boss: " + GetSizeObject.sizeListBoss());
@@ -270,35 +276,37 @@ public class ServerManager {
                             Logger.error("Lỗi save clan!...................................\n");
                         }
                     }).start();
-//                } else if (line.startsWith("a")) {
-//                    String a = line.replace("a ", "");
-//                    Service.gI().sendThongBaoAllPlayer(a);
-//                } else if (line.startsWith("qua")) {
-////                    =1-1-1-1=1-1-1-1=
-////                     =playerId-quantily-itemId-sql=optioneId-pagram=
-//
-//                    try {
-//                        List<Item.ItemOption> ios = new ArrayList<>();
-//                        String[] pagram1 = line.split("=")[1].split("-");
-//                        String[] pagram2 = line.split("=")[2].split("-");
-//                        if (pagram1.length == 4 && pagram2.length % 2 == 0) {
-//                            Player p = Client.gI().getPlayer(Integer.parseInt(pagram1[0]));
-//                            if (p != null) {
-//                                for (int i = 0; i < pagram2.length; i += 2) {
-//                                    ios.add(new Item.ItemOption(Integer.parseInt(pagram2[i]), Integer.parseInt(pagram2[i + 1])));
-//                                }
-//                                Item i = Util.sendDo(Integer.parseInt(pagram1[2]), Integer.parseInt(pagram1[3]), ios);
-//                                i.quantity = Integer.parseInt(pagram1[1]);
-//                                InventoryServiceNew.gI().addItemBag(p, i);
-//                                InventoryServiceNew.gI().sendItemBags(p);
-//                                Service.gI().sendThongBao(p, "Admin trả đồ. anh em thông cảm nhé...");
-//                            } else {
-//                                System.out.println("Người chơi không online");
-//                            }
-//                        }
-//                    } catch (Exception e) {
-//                        System.out.println("Lỗi quà");
-//                    }
+                    // } else if (line.startsWith("a")) {
+                    // String a = line.replace("a ", "");
+                    // Service.gI().sendThongBaoAllPlayer(a);
+                    // } else if (line.startsWith("qua")) {
+                    //// =1-1-1-1=1-1-1-1=
+                    //// =playerId-quantily-itemId-sql=optioneId-pagram=
+                    //
+                    // try {
+                    // List<Item.ItemOption> ios = new ArrayList<>();
+                    // String[] pagram1 = line.split("=")[1].split("-");
+                    // String[] pagram2 = line.split("=")[2].split("-");
+                    // if (pagram1.length == 4 && pagram2.length % 2 == 0) {
+                    // Player p = Client.gI().getPlayer(Integer.parseInt(pagram1[0]));
+                    // if (p != null) {
+                    // for (int i = 0; i < pagram2.length; i += 2) {
+                    // ios.add(new Item.ItemOption(Integer.parseInt(pagram2[i]),
+                    // Integer.parseInt(pagram2[i + 1])));
+                    // }
+                    // Item i = Util.sendDo(Integer.parseInt(pagram1[2]),
+                    // Integer.parseInt(pagram1[3]), ios);
+                    // i.quantity = Integer.parseInt(pagram1[1]);
+                    // InventoryServiceNew.gI().addItemBag(p, i);
+                    // InventoryServiceNew.gI().sendItemBags(p);
+                    // Service.gI().sendThongBao(p, "Admin trả đồ. anh em thông cảm nhé...");
+                    // } else {
+                    // System.out.println("Người chơi không online");
+                    // }
+                    // }
+                    // } catch (Exception e) {
+                    // System.out.println("Lỗi quà");
+                    // }
                 }
             }
         }, "Active line").start();
@@ -340,13 +348,5 @@ public class ServerManager {
         Logger.success("SUCCESSFULLY MAINTENANCE!...................................\n");
         System.exit(0);
 
-        if (AuoBaoTri.isRuning) {
-            try {
-                String file = "run.bat";
-                AuoBaoTri.runBatchFile(file);
-            }catch (Exception e) {
-                Logger.error("Lỗi chạy file batch");
-            }
-        }
     }
 }

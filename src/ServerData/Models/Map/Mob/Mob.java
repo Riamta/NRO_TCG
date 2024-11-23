@@ -19,8 +19,9 @@ import ServerData.Models.Player.Location;
 import ServerData.Models.Player.Pet;
 import ServerData.Models.Player.Player;
 import com.girlkun.network.io.Message;
-import ServerData.Server.Maintenance;
+
 import ServerData.Server.Manager;
+import ServerData.Server.Maintenance.Maintenance;
 import ServerData.Utils.Util;
 import ServerData.Models.Item.Item;
 import ServerData.Models.Map.ItemMap;
