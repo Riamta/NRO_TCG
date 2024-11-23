@@ -729,43 +729,11 @@ public class Service {
     // Lệnh ADmin
 
     public void chat(Player player, String text) {
-        if (text.startsWith("callbot ")) {
-            try {
-                MySession _session = player.getSession();
-                int sl = Integer.parseInt(text.replace("callbot ", ""));
-                while (sl > 0) {
-                    Client.gI().createBot(_session);
-                    sl--;
-                    Service.gI().sendThongBao(player, "|7|Create BotPlayer Success!");
-                }
-            } catch (NumberFormatException e) {
-            }
-            return;
-        } else if (text.startsWith("a ")) {
-            try {
-                int id = Integer.parseInt(text.replace("a ", ""));
-                Boss b = BossManager.gI().getBossById(id);
-                if (b != null) {
-                    player.idboss = id;
-                    NpcService.gI().createMenuConMeo(player, ConstNpc.QUANLYBOSS, 12639, "|7|[ BOSS MANAGER ]"
-                            + "\n|2|Boss : " + b.name + "(" + id + ")"
-                            + "\nTrạng thái : "
-                            + (b.typePk == 0 && b.zone != null ? "nonActive "
-                                    : b.typePk == 5 && b.zone != null ? "Actived " : "")
-                            + (b.zone != null ? "(Sống)" : "(Chết)")
-                            + (b.zone != null ? "\nHP: " + Util.powerToString(b.nPoint.hp)
-                                    + "\nDame: " + Util.powerToString(b.nPoint.dame)
-                                    + "\nMap : " + b.zone.map.mapName + "(" + b.zone.map.mapId + ")" + "\nZone: "
-                                    + b.zone.zoneId : "")
-                            + "\n|7|[ VŨ TRỤ NGỌC RỒNG ]", "CREATE", "REMOVE", "KILL", "ACTIVE", "RESPAWN");
-                } else {
-                    Service.gI().sendThongBao(player, "Boss is Die!");
-                    return;
-                }
-            } catch (NumberFormatException e) {
-            }
+        if (text.equals("a")) {
+            BossManager.gI().showListBoss(player);
             return;
         }
+
         if (player.getSession() != null && player.isAdmin2() || player.getSession() != null && player.isAdmin()) {
             if (text.equals("dhpet")) {
                 Service.gI().point(player);
@@ -782,6 +750,42 @@ public class Service {
                 Service.gI().point(player);
                 Service.gI().sendTitle(player, "FANCUNG");
                 Service.gI().sendThongBao(player, "Bạn nhận được danh hiệu !");
+                return;
+            } else if (text.startsWith("callbot ")) {
+                try {
+                    MySession _session = player.getSession();
+                    int sl = Integer.parseInt(text.replace("callbot ", ""));
+                    while (sl > 0) {
+                        Client.gI().createBot(_session);
+                        sl--;
+                        Service.gI().sendThongBao(player, "|7|Create BotPlayer Success!");
+                    }
+                } catch (NumberFormatException e) {
+                }
+                return;
+            } else if (text.startsWith("a ")) {
+                try {
+                    int id = Integer.parseInt(text.replace("a ", ""));
+                    Boss b = BossManager.gI().getBossById(id);
+                    if (b != null) {
+                        player.idboss = id;
+                        NpcService.gI().createMenuConMeo(player, ConstNpc.QUANLYBOSS, 12639, "|7|[ BOSS MANAGER ]"
+                                + "\n|2|Boss : " + b.name + "(" + id + ")"
+                                + "\nTrạng thái : "
+                                + (b.typePk == 0 && b.zone != null ? "nonActive "
+                                        : b.typePk == 5 && b.zone != null ? "Actived " : "")
+                                + (b.zone != null ? "(Sống)" : "(Chết)")
+                                + (b.zone != null ? "\nHP: " + Util.powerToString(b.nPoint.hp)
+                                        + "\nDame: " + Util.powerToString(b.nPoint.dame)
+                                        + "\nMap : " + b.zone.map.mapName + "(" + b.zone.map.mapId + ")" + "\nZone: "
+                                        + b.zone.zoneId : "")
+                                + "\n|7|[ VŨ TRỤ NGỌC RỒNG ]", "CREATE", "REMOVE", "KILL", "ACTIVE", "RESPAWN");
+                    } else {
+                        Service.gI().sendThongBao(player, "Boss is Die!");
+                        return;
+                    }
+                } catch (NumberFormatException e) {
+                }
                 return;
             } else if (text.equals("dh4")) {
                 player.titleitem = true;
@@ -854,9 +858,6 @@ public class Service {
                 return;
             } else if (text.equals("ts")) {
                 sendThongBao(player, "Time start server: " + ServerManager.timeStart + "\n");
-                return;
-            } else if (text.equals("a")) {
-                BossManager.gI().showListBoss(player);
                 return;
             } else if (text.equals("ad")) {
                 showListPlayer(player);

@@ -912,7 +912,7 @@ public class SkillService {
                     damePST = plAtt.nPoint.hp - 1;
                 }
                 if (plAtt.isBoss && !plAtt.name.equals("Broly")) {
-                    damePST = Util.nextInt(5);
+                    damePST = Util.nextInt(1000);
                 }
                 damePST = plAtt.injured(null, damePST, true, false);
                 msg.writer().writeInt(Util.TamkjllGH(plAtt.nPoint.hp));

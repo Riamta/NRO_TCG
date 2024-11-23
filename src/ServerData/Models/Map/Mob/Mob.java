@@ -158,7 +158,9 @@ public class Mob {
     public boolean isDie() {
         return this.point.gethp() <= 0;
     }
-
+    public boolean isSieuQuai() {
+        return this.lvMob > 0;
+    }
     public synchronized void injured(Player plAtt, double damage, boolean dieWhenHpFull) {
         if (!this.isDie()) {
             if (damage >= this.point.hp) {
@@ -316,21 +318,28 @@ public class Mob {
         if (player.charms.tdDaTrau > System.currentTimeMillis()) {
             dameMob /= 2;
         }
+        if(this.name.equals("Super Broly")) {
+            dameMob = player.nPoint.hpMax / 10;
+        }
+        // if (this.isSieuQuai()) {
+        //     dameMob = player.nPoint.hpMax / 10;
+        // }
         double dame = player.injured(null, dameMob, false, true);
         this.sendMobAttackMe(player, Util.TamkjllGH(dame));
         this.sendMobAttackPlayer(player);
     }
 
-    private void sendMobAttackMe(Player player, int dame) {
+    private void sendMobAttackMe(Player player, long dame) {
         if (!player.isPet && !player.isNewPet) {
             Message msg;
             try {
                 msg = new Message(-11);
                 msg.writer().writeByte(this.id);
-                msg.writer().writeInt(dame); // dame
+                msg.writer().writeLong(dame); //dame
                 player.sendMessage(msg);
                 msg.cleanup();
             } catch (Exception e) {
+
             }
         }
     }
@@ -341,10 +350,11 @@ public class Mob {
             msg = new Message(-10);
             msg.writer().writeByte(this.id);
             msg.writer().writeInt((int) player.id);
-            msg.writer().writeInt(Util.TamkjllGH(player.nPoint.hp));
-            Service.getInstance().sendMessAnotherNotMeInMap(player, msg);
+            msg.writer().writeLong(player.nPoint.hp);
+            Service.gI().sendMessAnotherNotMeInMap(player, msg);
             msg.cleanup();
         } catch (Exception e) {
+
         }
     }
 
@@ -494,16 +504,19 @@ public class Mob {
             if (Util.isTrue(50, 100)) { // vàng từ quái tất cả map
                 list.add(new ItemMap(zone, 76, Util.nextInt(1000000, 5000000), x, player.location.y, player.id));
             }
-             else if (Util.isTrue(5, 100)) { // ngọc xanh
-                list.add(new ItemMap(zone, 77, Util.nextInt(1, 5), x, player.location.y, player.id));
+             else if (Util.isTrue(2, 200)) { // ngọc đo
+                list.add(new ItemMap(zone, 861, Util.nextInt(1, 5), x, player.location.y, player.id));
             }
-             else if (Util.isTrue(20, 100)) { // spl
+            else if (Util.isTrue(10, 100)) { // ngọc xanh
+                list.add(new ItemMap(zone, 77, Util.nextInt(10, 100), x, player.location.y, player.id));
+            }
+             else if (Util.isTrue(5, 100)) { // spl
                 list.add(new ItemMap(Util.spl(zone, Util.nextInt(441, 447), 1, x, this.location.y, player.id)));
             }
              else if (Util.isTrue(10, 100)) { // đá nâng cấp
                 list.add(new ItemMap(Util.spl(zone, Util.nextInt(220, 224), 1, x, player.location.y, player.id)));
             }
-             else if (Util.isTrue(1, 100)) { // nro 4-7s
+             else if (Util.isTrue(5, 100)) { // nro 4-7s
                 list.add(new ItemMap(zone, Util.nextInt(17, 20), 1, x, player.location.y, player.id));
             }
              else if (Util.isTrue(1, 100)) { // xu bạc
