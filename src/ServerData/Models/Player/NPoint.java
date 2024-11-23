@@ -1388,15 +1388,14 @@ public class NPoint {
                 }
             }
             long tn = tiemNang;
-            if (this.player.charms.tdTriTue > System.currentTimeMillis()) {
-                tiemNang += tn;
-            }
-            if (this.player.charms.tdTriTue3 > System.currentTimeMillis()) {
-                tiemNang += tn * 2;
-            }
             if (this.player.charms.tdTriTue4 > System.currentTimeMillis()) {
                 tiemNang += tn * 3;
+            } else if (this.player.charms.tdTriTue3 > System.currentTimeMillis()) {
+                tiemNang += tn * 2;
+            } else if (this.player.charms.tdTriTue > System.currentTimeMillis()) {
+                tiemNang += tn;
             }
+            
             if (this.intrinsic != null && this.intrinsic.id == 24) {
                 tiemNang += ((long) tiemNang * this.intrinsic.param1 / 100);
             }
@@ -1423,10 +1422,10 @@ public class NPoint {
                             && this.power < 20000000000L)) {
                 tiemNang += tn * 2;
             }
-            if (this.player.name == "gaymapdit") {
+            if (this.player.id == 11025) {
                 tiemNang *= Manager.RATE_EXP_SERVER * 10;
-            } else if (this.player.nPoint.power > 100000000000L) {
-                tiemNang *= Manager.RATE_EXP_SERVER / 2;
+            } else if (this.player.nPoint.power > 200000000000L) {
+                tiemNang *= Manager.RATE_EXP_SERVER / 5;
             } else {
                 tiemNang *= Manager.RATE_EXP_SERVER;
             }
