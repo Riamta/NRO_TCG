@@ -120,7 +120,7 @@ public class BossesData {
             "Broly ", //name
             ConstPlayer.XAYDA, //gender
              new short[]{291, 292, 293, -1, -1, -1}, //outfit {head, body, leg, bag, aura, eff}
-            5000, //dame
+            2000, //dame
             new long[]{500}, //hp
             new int[]{5}, //map join
             new int[][]{

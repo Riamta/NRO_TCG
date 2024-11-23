@@ -5553,19 +5553,19 @@ public class CombineServiceNew {
             case 1:
                 return 200;
             case 2:
-                return 500;
+                return 300;
             case 3:
-                return 1000;
+                return 500;
             case 4:
-                return 2500;
+                return 1000;
             case 5:
-                return 5000;
+                return 2000;
             case 6:
-                return 10000;
+                return 3000;
             case 7:
-                return 15000;
+                return 4000;
             case 8:
-                return 20000;
+                return 5000;
         }
         return 0;
     }
