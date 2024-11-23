@@ -5557,15 +5557,15 @@ public class CombineServiceNew {
             case 3:
                 return 500;
             case 4:
-                return 1000;
+                return 600;
             case 5:
-                return 2000;
+                return 700;
             case 6:
-                return 3000;
+                return 800;
             case 7:
-                return 4000;
+                return 900;
             case 8:
-                return 5000;
+                return 1000;
         }
         return 0;
     }
