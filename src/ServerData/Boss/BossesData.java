@@ -150,7 +150,9 @@ public class BossesData {
             {Skill.KAMEJOKO, 7, 30000},
             {Skill.MASENKO, 7, 10000},
             {Skill.ANTOMIC, 7, 15000},
-            {Skill.TAI_TAO_NANG_LUONG, 1, 20000},},
+            {Skill.TAI_TAO_NANG_LUONG, 1, 20000},
+            {Skill.BIEN_KHI, 7, 20000},
+        },
         new String[]{
             "|-1|Gaaaaaa",
             "|-2|Tới đây đi!"

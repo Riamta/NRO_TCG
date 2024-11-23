@@ -151,7 +151,7 @@ public class Broly extends Boss {
             this.setDie(plAtt);
             die(plAtt);
             try {
-                new SuperBroly(zonetemp, hptemp * 10, dametemp * 5);
+                new SuperBroly(zonetemp, hptemp * 10, dametemp *5);
             } catch (Exception e) {
             }
         }
