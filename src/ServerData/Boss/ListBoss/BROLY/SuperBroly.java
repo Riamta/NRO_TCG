@@ -35,7 +35,7 @@ public class SuperBroly extends Boss {
                 ConstPlayer.TRAI_DAT, //gender
                 new short[]{294, 295, 296, 28, -1, -1}, //outfit {head, body, leg, bag, aura, eff}
                 ((dame)), //dame
-                new long[]{((Util.nextInt(3000000, 5000000) + hp))}, //hp
+                new long[]{((Util.nextInt(100000000, 20000000) + hp))}, //hp
                 new int[]{zone.map.mapId}, //map join
                 new int[][]{
                     {Skill.LIEN_HOAN, 7, 2000},
