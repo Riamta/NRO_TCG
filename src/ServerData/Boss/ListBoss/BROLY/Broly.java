@@ -98,7 +98,7 @@ public class Broly extends Boss {
             return;
         }
         this.nPoint.dameg += this.nPoint.dame * 2 / 100;
-        this.nPoint.hpg += this.nPoint.hpg * 80 / 100;
+        this.nPoint.hpg += this.nPoint.hpg * 1.5;
         this.nPoint.critg++;
         this.nPoint.calPoint();
         PlayerService.gI().hoiPhuc(this, this.nPoint.hp, this.nPoint.mp);
@@ -150,7 +150,7 @@ public class Broly extends Boss {
             this.setDie(plAtt);
             die(plAtt);
             try {
-                new SuperBroly(zonetemp, this.getPlayerAttack().nPoint.hpMax / 30, dametemp * 5);
+                new SuperBroly(zonetemp, this.getPlayerAttack().nPoint.hpMax / 25, dametemp * 5);
             } catch (Exception e) {
             }
         }
