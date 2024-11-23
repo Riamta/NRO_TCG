@@ -143,7 +143,7 @@ public class BossesData {
         "Super Broly", //name
         ConstPlayer.TRAI_DAT, //gender
         new short[]{294, 295, 296, 28, -1, -1}, //outfit {head, body, leg, bag, aura, eff}
-        (100000 ), //dame
+        (1000 ), //dame
         new long[]{((5000000 ))}, //hp
         new int[]{49}, //map join
         new int[][]{
