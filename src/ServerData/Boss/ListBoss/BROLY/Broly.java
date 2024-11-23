@@ -59,8 +59,7 @@ public class Broly extends Boss {
                 new int[][]{
                     {Skill.DRAGON, 7, 1000},
                     {Skill.TAI_TAO_NANG_LUONG, 7, 20000},
-                    {Skill.ANTOMIC, 7, 500},
-                    {Skill.THAI_DUONG_HA_SAN, 7, 500}},
+                    {Skill.ANTOMIC, 7, 500}},
                 new String[]{
                     "|-1|Tuy không biết các ngươi là ai, nhưng ta rất ấn tượng đấy!",
                     "|-2|Tới đây đi!"
