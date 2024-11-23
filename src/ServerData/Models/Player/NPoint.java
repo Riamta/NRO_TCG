@@ -1424,9 +1424,9 @@ public class NPoint {
                 tiemNang += tn * 2;
             }
             if (this.player.nPoint.power > 100000000000L) {
-                tiemNang *= Manager.RATE_EXP_SERVER;
-            } else {
                 tiemNang *= Manager.RATE_EXP_SERVER / 2;
+            } else {
+                tiemNang *= Manager.RATE_EXP_SERVER;
             }
             tiemNang = calSubTNSM(tiemNang);
             if (tiemNang <= 0) {
