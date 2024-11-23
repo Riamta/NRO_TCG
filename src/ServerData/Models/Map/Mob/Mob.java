@@ -318,9 +318,9 @@ public class Mob {
         if (player.charms.tdDaTrau > System.currentTimeMillis()) {
             dameMob /= 2;
         }
-        if(this.name.equals("Super Broly")) {
-            dameMob = player.nPoint.hpMax / 10;
-        }
+        // if(this.name.equals("Super Broly")) {
+        //     dameMob = player.nPoint.hpMax / 10;
+        // }
         // if (this.isSieuQuai()) {
         //     dameMob = player.nPoint.hpMax / 10;
         // }

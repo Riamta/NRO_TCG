@@ -147,9 +147,9 @@ public class BossesData {
         new long[]{((5000000 ))}, //hp
         new int[]{49}, //map join
         new int[][]{
-            {Skill.KAMEJOKO, 7, 30000},
-            {Skill.MASENKO, 7, 10000},
-            {Skill.ANTOMIC, 7, 15000},
+            {Skill.KAMEJOKO, 7, 3000},
+            {Skill.MASENKO, 7, 1000},
+            {Skill.ANTOMIC, 7, 1500},
             {Skill.TAI_TAO_NANG_LUONG, 1, 20000},
             {Skill.BIEN_KHI, 7, 20000},
         },

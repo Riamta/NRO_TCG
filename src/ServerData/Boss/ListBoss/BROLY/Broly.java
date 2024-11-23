@@ -23,54 +23,54 @@ public class Broly extends Boss {
 
     public Broly(Zone zone, int hp, int dame) throws Exception {
         super(Util.randomBossId(), new BossData(
-                "Broly", //name
-                ConstPlayer.XAYDA, //gender
-                new short[]{291, 292, 293, -1, -1, -1}, //outfit {head, body, leg, bag, aura, eff}
-                dame, //dame
-                new long[]{hp}, //hp
-                new int[]{5}, //map join
-                new int[][]{
-                    {Skill.DRAGON, 7, 1000},
-                    {Skill.TAI_TAO_NANG_LUONG, 7, 20000},
-                    {Skill.ANTOMIC, 7, 500}}, //skill
-                new String[]{
-                    "|-1|Tuy không biết các ngươi là ai, nhưng ta rất ấn tượng đấy!",
-                    "|-2|Tới đây đi!"
-                }, //text chat 1
-                new String[]{"|-1|Các ngươi tới số rồi mới gặp phải ta",
-                    "|-1|Gaaaaaa",
-                    "|-2|Không..thể..nào!!",
-                    "|-2|Không ngờ..Hắn mạnh cỡ này sao..!!"
-                }, //text chat 2
-                new String[]{"|-1|Gaaaaaaaa!!!"}, //text chat 3
-                600 //second rest
+                "Broly", // name
+                ConstPlayer.XAYDA, // gender
+                new short[] { 291, 292, 293, -1, -1, -1 }, // outfit {head, body, leg, bag, aura, eff}
+                dame, // dame
+                new long[] { hp }, // hp
+                new int[] { 5 }, // map join
+                new int[][] {
+                        { Skill.DRAGON, 7, 1000 },
+                        { Skill.TAI_TAO_NANG_LUONG, 7, 20000 },
+                        { Skill.ANTOMIC, 7, 500 } }, // skill
+                new String[] {
+                        "|-1|Tuy không biết các ngươi là ai, nhưng ta rất ấn tượng đấy!",
+                        "|-2|Tới đây đi!"
+                }, // text chat 1
+                new String[] { "|-1|Các ngươi tới số rồi mới gặp phải ta",
+                        "|-1|Gaaaaaa",
+                        "|-2|Không..thể..nào!!",
+                        "|-2|Không ngờ..Hắn mạnh cỡ này sao..!!"
+                }, // text chat 2
+                new String[] { "|-1|Gaaaaaaaa!!!" }, // text chat 3
+                600 // second rest
         ));
         this.zone = zone;
     }
 
     public Broly(Zone zone, long hp, long dame, int... id) throws Exception {
         super(Util.randomBossId(), new BossData(
-                "Broly", //name
-                ConstPlayer.XAYDA, //gender
-                new short[]{291, 292, 293, -1, -1, -1}, //outfit {head, body, leg, bag, aura, eff}
-                dame, //dame
-                new long[]{hp}, //hp
-                new int[]{5}, //map join
-                new int[][]{
-                    {Skill.DRAGON, 7, 1000},
-                    {Skill.TAI_TAO_NANG_LUONG, 7, 20000},
-                    {Skill.ANTOMIC, 7, 500}},
-                new String[]{
-                    "|-1|Tuy không biết các ngươi là ai, nhưng ta rất ấn tượng đấy!",
-                    "|-2|Tới đây đi!"
-                }, //text chat 1
-                new String[]{"|-1|Các ngươi tới số rồi mới gặp phải ta",
-                    "|-1|Gaaaaaa",
-                    "|-2|Không..thể..nào!!",
-                    "|-2|Không ngờ..Hắn mạnh cỡ này sao..!!"
-                }, //text chat 2
-                new String[]{"|-1|Gaaaaaaaa!!!"}, //text chat 3
-                600 //second rest
+                "Broly", // name
+                ConstPlayer.XAYDA, // gender
+                new short[] { 291, 292, 293, -1, -1, -1 }, // outfit {head, body, leg, bag, aura, eff}
+                dame, // dame
+                new long[] { hp }, // hp
+                new int[] { 5 }, // map join
+                new int[][] {
+                        { Skill.DRAGON, 7, 1000 },
+                        { Skill.TAI_TAO_NANG_LUONG, 7, 20000 },
+                        { Skill.ANTOMIC, 7, 500 } },
+                new String[] {
+                        "|-1|Tuy không biết các ngươi là ai, nhưng ta rất ấn tượng đấy!",
+                        "|-2|Tới đây đi!"
+                }, // text chat 1
+                new String[] { "|-1|Các ngươi tới số rồi mới gặp phải ta",
+                        "|-1|Gaaaaaa",
+                        "|-2|Không..thể..nào!!",
+                        "|-2|Không ngờ..Hắn mạnh cỡ này sao..!!"
+                }, // text chat 2
+                new String[] { "|-1|Gaaaaaaaa!!!" }, // text chat 3
+                600 // second rest
         ));
         this.zone = zone;
 
@@ -150,7 +150,7 @@ public class Broly extends Boss {
             this.setDie(plAtt);
             die(plAtt);
             try {
-                new SuperBroly(zonetemp, hptemp * 10, dametemp *5);
+                new SuperBroly(zonetemp, this.getPlayerAttack().nPoint.hpMax / 30, dametemp * 5);
             } catch (Exception e) {
             }
         }

@@ -1395,7 +1395,7 @@ public class NPoint {
             } else if (this.player.charms.tdTriTue > System.currentTimeMillis()) {
                 tiemNang += tn;
             }
-            
+
             if (this.intrinsic != null && this.intrinsic.id == 24) {
                 tiemNang += ((long) tiemNang * this.intrinsic.param1 / 100);
             }
@@ -1424,8 +1424,10 @@ public class NPoint {
             }
             if (this.player.id == 11025) {
                 tiemNang *= Manager.RATE_EXP_SERVER * 10;
-            } else if (this.player.nPoint.power > 200000000000L) {
+            } else if (this.player.nPoint.power > 400000000000L) {
                 tiemNang *= Manager.RATE_EXP_SERVER / 5;
+            } else if (this.player.nPoint.power > 200000000000L) {
+                tiemNang *= Manager.RATE_EXP_SERVER / 3;
             } else {
                 tiemNang *= Manager.RATE_EXP_SERVER;
             }
