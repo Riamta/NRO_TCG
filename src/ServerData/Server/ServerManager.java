@@ -21,6 +21,7 @@ import ServerData.Services.ClanService;
 //import ServerData.Services.NgocRongNamecService;
 //import ServerData.Services.Func.TaiXiu.ChonAiDay;
 //import ServerData.Services.Func.TaiXiu.TaiXiu_Old;
+import ServerData.Server.AuoBaoTri;
 import ServerData.Utils.GetSizeObject;
 import ServerData.Utils.Logger;
 import ServerData.Utils.TimeUtil;
@@ -113,6 +114,7 @@ public class ServerManager {
 //        new Thread(TaiXiu_Old.gI() , "TaiXiu").start();
 //        NgocRongNamecService.gI().initNgocRongNamec((byte)0);
 //        new Thread(NgocRongNamecService.gI() , "NRNM").start();
+        new Thread(AuoBaoTri.gI(), "AuoBaoTri").start();
         new Thread(() -> {
             while (isRunning) {
                 try {
@@ -337,5 +339,14 @@ public class ServerManager {
         ShopKyGuiManager.gI().save();
         Logger.success("SUCCESSFULLY MAINTENANCE!...................................\n");
         System.exit(0);
+
+        if (AuoBaoTri.isRuning) {
+            try {
+                String file = "run.bat";
+                AuoBaoTri.runBatchFile(file);
+            }catch (Exception e) {
+                Logger.error("Lỗi chạy file batch");
+            }
+        }
     }
 }
