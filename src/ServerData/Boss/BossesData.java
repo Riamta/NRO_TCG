@@ -811,7 +811,7 @@ public class BossesData {
             "Sayan Tà Ác Cumber", //name
             ConstPlayer.XAYDA, //gender
             new short[]{102, 474, 475, -1, -1, -1}, //outfit {head, body, leg, bag, aura, eff}
-            1000, //dame
+            90000, //dame
             new long[]{1_500_000_000L}, //hp
             new int[]{155}, //map join
             new int[][]{
@@ -1036,7 +1036,7 @@ public class BossesData {
             "Tập Sự 1", //name
             ConstPlayer.TRAI_DAT, //gender
              new short[]{526, 525, 524, -1, -1, -1}, //outfit {head, body, leg, bag, aura, eff}
-            1000, //dame
+            70000, //dame
             new long[]{200000000}, //hp
             new int[]{131, 132, 133}, //map join
             new int[][]{
@@ -1096,7 +1096,7 @@ public class BossesData {
             "ELEC", //name
             ConstPlayer.XAYDA, //gender
             new short[]{168, 169, 170, -1, -1, -1}, //outfit {head, body, leg, bag, aura, eff}
-            1000, //dame
+            30000, //dame
             new long[]{150000000}, //hp
             new int[]{144}, //map join
 //           new int[]{86}, //map join
@@ -1123,7 +1123,7 @@ public class BossesData {
             "OIL", //name
             ConstPlayer.XAYDA, //gender
             new short[]{171, 172, 173, -1, -1, -1}, //outfit {head, body, leg, bag, aura, eff}
-            1000, //dame
+            30000, //dame
             new long[]{170000000}, //hp
             new int[]{144}, //map join
             new int[][]{
@@ -1147,7 +1147,7 @@ public class BossesData {
             "MACKI", //name
             ConstPlayer.XAYDA, //gender
             new short[]{177, 178, 179, -1, -1, -1}, //outfit {head, body, leg, bag, aura, eff}
-            1000, //dame
+            50000, //dame
             new long[]{200000000}, //hp
             new int[]{144}, //map join
             new int[][]{
@@ -1171,7 +1171,7 @@ public class BossesData {
             "GAS", //name
             ConstPlayer.XAYDA, //gender
             new short[]{180, 181, 182, -1, -1, -1}, //outfit {head, body, leg, bag, aura, eff}
-            1000, //dame
+            50000, //dame
             new long[]{220000000}, //hp
             new int[]{144}, //map join
             new int[][]{
@@ -1193,7 +1193,7 @@ public class BossesData {
             "Bulma", //name
             ConstPlayer.TRAI_DAT, //gender
             new short[]{409, 410, 411, -1, -1, -1}, //outfit {head, body, leg, bag, aura, eff}
-            1000, //dame
+            99000, //dame
             new long[]{2000000000}, //hp
             new int[]{38}, //map join
             new int[][]{
@@ -1213,7 +1213,7 @@ public class BossesData {
             "Cumber", //name
             ConstPlayer.TRAI_DAT, //gender
             new short[]{1399, 1400, 1401, -1, 10, -1}, //outfit {head, body, leg, bag, aura, eff}
-            1000, //dame
+            50000, //dame
             new long[]{2000000000}, //hp
             new int[]{155}, //map join
             new int[][]{
@@ -1230,7 +1230,7 @@ public class BossesData {
             "Cumber SS3", //name
             ConstPlayer.TRAI_DAT, //gender
             new short[]{1207, 1208, 1209, -1, 10, -1}, //outfit {head, body, leg, bag, aura, eff}
-            1000, //dame
+            60000, //dame
             new long[]{2000000000}, //hp
             new int[]{155}, //map join
             new int[][]{
@@ -1300,7 +1300,7 @@ public class BossesData {
             "Tập Sự 2", //name
             ConstPlayer.TRAI_DAT, //gender
             new short[]{527, 525, 524, -1, -1, -1}, //outfit {head, body, leg, bag, aura, eff}
-            1000, //dame
+            90000, //dame
             new long[]{400000000}, //hp
             new int[]{131, 132, 133}, //map join
             new int[][]{
@@ -1317,7 +1317,7 @@ public class BossesData {
             "Tập Sự 3", //name
             ConstPlayer.TRAI_DAT, //gender
             new short[]{528, 525, 524, -1, -1, -1}, //outfit {head, body, leg, bag, aura, eff}
-            1000, //dame
+            90000, //dame
             new long[]{700000000}, //hp
             new int[]{131, 132, 133}, //map join
             new int[][]{
@@ -1333,7 +1333,7 @@ public class BossesData {
             "Tập Sự 4",
             ConstPlayer.TRAI_DAT, //gender
             new short[]{529, 525, 524, -1, -1, -1}, //outfit {head, body, leg, bag, aura, eff}
-            1000, //dame
+            90000, //dame
             new long[]{1000000000}, //hp
             new int[]{131, 132, 133}, //map join
             new int[][]{
@@ -1352,7 +1352,7 @@ public class BossesData {
             "Người Máy Doraemon",
             ConstPlayer.XAYDA,
             new short[]{790, 791, 792, -1, -1, -1},
-            1000,
+            90000,
             new long[]{1_000_000_000},
             new int[]{13},
             //            new int[]{14},
@@ -1373,7 +1373,7 @@ public class BossesData {
             "Anh Hùng Spider Man",
             ConstPlayer.XAYDA,
             new short[]{1273, 1274, 1275, -1, -1, -1},
-            1000,
+            90000,
             new long[]{1_500_000_000},
             new int[]{174},
             //            new int[]{14},
@@ -1392,7 +1392,7 @@ public class BossesData {
             "Anh Hùng Strange",
             ConstPlayer.XAYDA,
             new short[]{1282, 1283, 1284, -1, -1, -1},
-            1000,
+            90000,
             new long[]{1_500_000_000},
             new int[]{174},
             //            new int[]{14},
@@ -1412,7 +1412,7 @@ public class BossesData {
             "Siêu Nhân GoHan",
             ConstPlayer.XAYDA,
             new short[]{1053, 1054, 1055, -1, -1, -1},
-            1000,
+            90000,
             new long[]{2_000_000_000},
             new int[]{174},
             //            new int[]{14},
@@ -1431,7 +1431,7 @@ public class BossesData {
             "Siêu Nhân ChiChi",
             ConstPlayer.XAYDA,
             new short[]{1056, 1057, 1058, -1, -1, -1},
-            1000,
+            90000,
             new long[]{1_750_000_000},
             new int[]{174},
             //            new int[]{14},
@@ -1450,7 +1450,7 @@ public class BossesData {
             "Siêu Nhân Pan",
             ConstPlayer.XAYDA,
             new short[]{1059, 1060, 1061, -1, -1, -1},
-            1000,
+            90000,
             new long[]{1_500_000_000},
             new int[]{174},
             //            new int[]{14},
@@ -1777,7 +1777,7 @@ public class BossesData {
             "Su", //name
             ConstPlayer.TRAI_DAT, //gender
             new short[]{618, 619, 620, -1, -1, -1}, //outfit {head, body, leg, bag, aura, eff}
-            1000, //dame
+            90000, //dame
             new long[]{150_000_000}, //hp
             new int[]{0}, //map join
             (int[][]) Util.addArray(FULL_DEMON), //skill
@@ -1932,7 +1932,7 @@ public class BossesData {
             "Thiên sứ Vados", //name
             ConstPlayer.NAMEC, //gender
             new short[]{530, 531, 532, -1, -1, -1}, //outfit {head, body, leg, bag, aura, eff}
-            990001000, //dame
+            90000, //dame
             new long[]{2_000_000_000}, //hp
             new int[]{146}, //map join
             new int[][]{
@@ -2061,7 +2061,7 @@ public class BossesData {
             "Rồng Eis 3 Sao", //name
             ConstPlayer.XAYDA, //gender
             new short[]{207, 208, 209, -1, -1, -1}, //outfit {head, body, leg, bag, aura, eff}
-            1000, //dame
+            100000, //dame
             new long[]{500000000}, //hp
             new int[]{87}, //map join
             new int[][]{
@@ -2085,7 +2085,7 @@ public class BossesData {
             "Rồng Nuova 4 Sao", //name
             ConstPlayer.XAYDA, //gender
             new short[]{210, 211, 212, -1, -1, -1}, //outfit {head, body, leg, bag, aura, eff}
-            1000, //dame
+            100000, //dame
             new long[]{500000000}, //hp
             new int[]{88}, //map join
             new int[][]{
@@ -2108,7 +2108,7 @@ public class BossesData {
             "Rồng Rage 5 Sao", //name
             ConstPlayer.XAYDA, //gender
             new short[]{213, 214, 215, -1, -1, -1}, //outfit {head, body, leg, bag, aura, eff}
-            1000, //dame
+            100000, //dame
             new long[]{500000000}, //hp
             new int[]{89}, //map join
             new int[][]{
@@ -2129,7 +2129,7 @@ public class BossesData {
             "Rồng Oceanus 6 Sao", //name
             ConstPlayer.XAYDA, //gender
             new short[]{222, 223, 224, -1, -1, -1}, //outfit {head, body, leg, bag, aura, eff}
-            1000, //dame
+            100000, //dame
             new long[]{500000000}, //hp
             new int[]{90}, //map join
             new int[][]{
@@ -2151,7 +2151,7 @@ public class BossesData {
             "Rồng Naturon 7 Sao", //name
             ConstPlayer.XAYDA, //gender
             new short[]{216, 217, 218, -1, -1, -1}, //outfit {head, body, leg, bag, aura, eff}
-            1000, //dame
+            100000,
             new long[]{500000000}, //hp
             new int[]{91}, //map join
             new int[][]{
@@ -2173,7 +2173,7 @@ public class BossesData {
             "Mabư",
             ConstPlayer.XAYDA,
             new short[]{297, 298, 299, -1, -1, -1},
-            1000,
+            100000,
             new long[]{1000000000L},
             new int[]{120},
             new int[][]{
@@ -2192,7 +2192,7 @@ public class BossesData {
             "Ma Vương Dabura",
             ConstPlayer.XAYDA,
             new short[]{418, 419, 420, -1, -1, -1},
-            1000,
+            100000,
             new long[]{100000000L},
             new int[]{114},
             new int[][]{
@@ -2208,7 +2208,7 @@ public class BossesData {
             "Ma Vương Dabura",
             ConstPlayer.XAYDA,
             new short[]{418, 419, 420, -1, -1, -1},
-            1000,
+            30000,
             new long[]{50000000L},
             new int[]{115},
             new int[][]{
@@ -2224,7 +2224,7 @@ public class BossesData {
             "Bui Bui",
             ConstPlayer.XAYDA,
             new short[]{451, 452, 453, -1, -1, -1},
-            1000,
+            50000,
             new long[]{750000000L},
             new int[]{117},
             new int[][]{
@@ -2241,7 +2241,7 @@ public class BossesData {
             "Bui Bui",
             ConstPlayer.XAYDA,
             new short[]{451, 452, 453, -1, -1, -1},
-            1000,
+            100000,
             new long[]{800000000L},
             new int[]{118},
             new int[][]{
@@ -2257,7 +2257,7 @@ public class BossesData {
             "Yacôn",
             ConstPlayer.XAYDA,
             new short[]{415, 416, 417, -1, -1, -1},
-            1000,
+            100000,
             new long[]{900000000L},
             new int[]{119},
             new int[][]{
@@ -2273,7 +2273,7 @@ public class BossesData {
             "Cooler", //name
             ConstPlayer.TRAI_DAT, //gender
             new short[]{496, 497, 498, -1, -1, -1}, //outfit {head, body, leg, bag, aura, eff}
-            1000, //dame
+            90000, //dame
             new long[]{1_500_000_000}, //hp
             new int[]{106, 107, 108, 109}, //map join
             new int[][]{
@@ -2293,7 +2293,7 @@ public class BossesData {
             "Cooler 2", //name
             ConstPlayer.TRAI_DAT, //gender
             new short[]{499, 500, 501, -1, -1, -1}, //outfit {head, body, leg, bag, aura, eff}
-            1000, //dame
+            90000, //dame
             new long[]{2_000_000_000}, //hp
             new int[]{106, 107, 108, 109}, //map join
             new int[][]{
@@ -2314,7 +2314,7 @@ public class BossesData {
             "Super Android 17", //name
             ConstPlayer.TRAI_DAT, //gender
             new short[]{636, 637, 638, -1, -1, -1}, //outfit {head, body, leg, bag, aura, eff}
-            1000, //dame
+            5500000, //dame
             new long[]{1000000000l}, //hp
             new int[]{100}, //map join
             new int[][]{
@@ -2334,7 +2334,7 @@ public class BossesData {
             "Boss Quản Gia", //name
             ConstPlayer.TRAI_DAT, //gender
             new short[]{573, 574, 575, -1, -1, -1}, //outfit {head, body, leg, bag, aura, eff}
-            1000, //dame
+            30000, //dame
             new long[]{1_000_000_000L}, //hp
             new int[]{0, 7, 14}, //map join
             new int[][]{
@@ -2352,7 +2352,7 @@ public class BossesData {
             "Gojo VIP", //name
             ConstPlayer.TRAI_DAT, //gender
             new short[]{1258, 1259, 1260, -1, -1, -1}, //outfit {head, body, leg, bag, aura, eff}
-            1000, //dame
+            30000, //dame
             new long[]{2_000_000_000}, //hp
             new int[]{104}, //map join
             new int[][]{
@@ -2373,7 +2373,7 @@ public class BossesData {
             "Sát Thủ Bóng Đêm", //name
             ConstPlayer.TRAI_DAT, //gender
             new short[]{1258, 1259, 1260, -1, -1, -1}, //outfit {head, body, leg, bag, aura, eff}
-            1000, //dame
+            30000, //dame
             new long[]{1_000_000_000}, //hp
             new int[]{169}, //map join
             new int[][]{
@@ -2394,7 +2394,7 @@ public class BossesData {
             "GOHAN SSJ5", //name
             ConstPlayer.TRAI_DAT, //gender
             new short[]{1288, 1289, 1290, -1, -1, -1}, //outfit {head, body, leg, bag, aura, eff}
-            1000, //dame
+            90000, //dame
             new long[]{1_500_000_000}, //hp
             new int[]{143}, //map join
             new int[][]{
@@ -2415,7 +2415,7 @@ public class BossesData {
             "Thần Tối thượng ZENO", //name
             ConstPlayer.TRAI_DAT, //gender
             new short[]{1216, 1217, 1218, -1, -1, -1}, //outfit {head, body, leg, bag, aura, eff}
-            1000, //dame
+            200000, //dame
             new long[]{2_000_000_000}, //hp
             new int[]{144}, //map join
             new int[][]{

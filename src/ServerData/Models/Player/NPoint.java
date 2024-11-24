@@ -1422,9 +1422,7 @@ public class NPoint {
                             && this.power < 20000000000L)) {
                 tiemNang += tn * 2;
             }
-            if (this.player.id == 11025) {
-                tiemNang *= Manager.RATE_EXP_SERVER * 10;
-            } else if (this.player.nPoint.power > 60_000_000_000L) {
+            if (this.player.nPoint.power > 60_000_000_000L) {
                 tiemNang *= 1;
             } else if (this.player.nPoint.power < 30_000_000_000L) {
                 tiemNang *= Manager.RATE_EXP_SERVER * 2;
