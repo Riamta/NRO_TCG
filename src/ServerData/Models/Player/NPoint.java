@@ -1471,7 +1471,7 @@ public class NPoint {
         } else if (this.power >= 120_000_000_000L) {
             tiemNang /= 30;
         } else if (this.power >= 80_000_000_000L) {
-            tiemNang /= 5;
+            tiemNang /= 20;
         } else if (this.power >= 60_000_000_000L) {
             tiemNang *= 5;
         } else if (this.power >= 40_000_000_000L) {
