@@ -1424,14 +1424,12 @@ public class NPoint {
             }
             if (this.player.nPoint.power > 80_000_000_000L) {
                 tiemNang /= 2;
-            } else if (this.player.nPoint.power > 60_000_000_000L) {
-                tiemNang *= 1;
             } else if (this.player.nPoint.power < 30_000_000_000L) {
-                tiemNang *= Manager.RATE_EXP_SERVER * 2;
+                tiemNang *= Manager.RATE_EXP_SERVER * 3;
             } else {
                 tiemNang *= Manager.RATE_EXP_SERVER;
             }
-            //tiemNang = calSubTNSM(tiemNang);
+            // tiemNang = calSubTNSM(tiemNang);
             if (tiemNang <= 0) {
                 tiemNang = 1;
             }
@@ -1475,7 +1473,7 @@ public class NPoint {
         } else if (this.power <= 60_000_000_000L) {
             tiemNang *= 5;
         } else if (this.power <= 40_000_000_000L) {
-            tiemNang *= 3;
+            tiemNang *= 5;
         }
         if (player.zone.map.mapId >= 156 && player.zone.map.mapId <= 159
                 || player.zone.map.mapId >= 160 && player.zone.map.mapId <= 163) {
@@ -1512,9 +1510,9 @@ public class NPoint {
         } else if (this.power >= 80_000_000_000L) {
             tiemNang /= 10;
         } else if (this.power <= 60_000_000_000L) {
-            tiemNang *= 1;
+            tiemNang *= 5;
         } else if (this.power <= 40_000_000_000L) {
-            tiemNang *= 3;
+            tiemNang *= 10;
         }
         if (player.zone.map.mapId >= 156 && player.zone.map.mapId <= 159
                 || player.zone.map.mapId >= 160 && player.zone.map.mapId <= 163) {
