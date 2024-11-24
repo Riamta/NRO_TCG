@@ -1424,8 +1424,7 @@ public class NPoint {
             }
             if (this.player.nPoint.power > 80_000_000_000L) {
                 tiemNang /= 2;
-            }
-            else if (this.player.nPoint.power > 60_000_000_000L) {
+            } else if (this.player.nPoint.power > 60_000_000_000L) {
                 tiemNang *= 1;
             } else if (this.player.nPoint.power < 30_000_000_000L) {
                 tiemNang *= Manager.RATE_EXP_SERVER * 2;
@@ -1474,9 +1473,9 @@ public class NPoint {
         } else if (this.power >= 80_000_000_000L) {
             tiemNang /= 10;
         } else if (this.power >= 60_000_000_000L) {
-            tiemNang *= 1;
+            tiemNang /= 10;
         } else if (this.power >= 40_000_000_000L) {
-            tiemNang *= 3;
+            tiemNang /= 5;
         }
         if (player.zone.map.mapId >= 156 && player.zone.map.mapId <= 159
                 || player.zone.map.mapId >= 160 && player.zone.map.mapId <= 163) {
@@ -1484,6 +1483,7 @@ public class NPoint {
         }
         return tiemNang;
     }
+
     public long calSubTNSMDT(long tiemNang) {
         if (this.power >= 1_000_000_000_000L) {
             tiemNang /= 130;
@@ -1522,6 +1522,7 @@ public class NPoint {
         }
         return tiemNang;
     }
+
     public short getTileHutHp(boolean isMob) {
         if (isMob) {
             return (short) (this.tlHutHp + this.tlHutHpMob);
