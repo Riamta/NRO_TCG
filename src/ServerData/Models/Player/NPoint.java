@@ -1473,9 +1473,9 @@ public class NPoint {
         } else if (this.power >= 80_000_000_000L) {
             tiemNang /= 20;
         } else if (this.power >= 60_000_000_000L) {
-            tiemNang /= 10;
+            tiemNang *= 5;
         } else if (this.power >= 40_000_000_000L) {
-            tiemNang /= 5;
+            tiemNang *= 3;
         }
         if (player.zone.map.mapId >= 156 && player.zone.map.mapId <= 159
                 || player.zone.map.mapId >= 160 && player.zone.map.mapId <= 163) {
@@ -1502,18 +1502,18 @@ public class NPoint {
         } else if (this.power >= 300_000_000_000L) {
             tiemNang /= 60;
         } else if (this.power >= 250_000_000_000L) {
-            tiemNang /= 55;
-        } else if (this.power >= 200_000_000_000L) {
             tiemNang /= 50;
-        } else if (this.power >= 160_000_000_000L) {
+        } else if (this.power >= 200_000_000_000L) {
             tiemNang /= 40;
-        } else if (this.power >= 120_000_000_000L) {
+        } else if (this.power >= 160_000_000_000L) {
             tiemNang /= 30;
-        } else if (this.power >= 80_000_000_000L) {
+        } else if (this.power >= 120_000_000_000L) {
             tiemNang /= 20;
-        } else if (this.power >= 60_000_000_000L) {
+        } else if (this.power >= 80_000_000_000L) {
+            tiemNang /= 10;
+        } else if (this.power <= 60_000_000_000L) {
             tiemNang *= 1;
-        } else if (this.power >= 40_000_000_000L) {
+        } else if (this.power <= 40_000_000_000L) {
             tiemNang *= 3;
         }
         if (player.zone.map.mapId >= 156 && player.zone.map.mapId <= 159
