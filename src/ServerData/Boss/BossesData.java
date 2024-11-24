@@ -287,7 +287,7 @@ public class BossesData {
             "Fide đại ca 1", //name
             ConstPlayer.XAYDA, //gender
             new short[]{183, 184, 185, -1, -1, -1}, //outfit {head, body, leg, bag, aura, eff}
-            35000, //dame
+            3500, //dame
             new long[]{70_000_000}, //hp
             new int[]{80}, //map join
             (int[][]) Util.addArray(FULL_ANTOMIC, FULL_GALICK), //skill
@@ -312,7 +312,7 @@ public class BossesData {
             "Fide đại ca 2", //name
             ConstPlayer.XAYDA, //gender
             new short[]{186, 187, 188, -1, -1, -1}, //outfit {head, body, leg, bag, aura, eff}
-            35000, //dame
+            3500, //dame
             new long[]{90_000_000}, //hp
             new int[]{80}, //map join
             (int[][]) Util.addArray(FULL_ANTOMIC, FULL_LIENHOAN), //skill
@@ -361,7 +361,7 @@ public class BossesData {
             "Dr.Kôrê", //name
             ConstPlayer.TRAI_DAT, //gender
             new short[]{255, 256, 257, -1, -1, -1}, //outfit {head, body, leg, bag, aura, eff}
-            30000, //dame
+            3000, //dame
             new long[]{125_000_000}, //hp
             new int[]{96, 94, 93}, //map join
             new int[][]{
@@ -396,7 +396,7 @@ public class BossesData {
             "Android 19", //name
             ConstPlayer.TRAI_DAT, //gender
             new short[]{249, 250, 251, -1, -1, -1}, //outfit {head, body, leg, bag, aura, eff}
-            40000, //dame
+            4000, //dame
             new long[]{150_000_000}, //hp
             new int[]{96, 94, 93}, //map join
             new int[][]{
@@ -417,7 +417,7 @@ public class BossesData {
             "Android 13", //name
             ConstPlayer.TRAI_DAT, //gender
             new short[]{252, 253, 254, -1, -1, -1}, //outfit {head, body, leg, bag, aura, eff}
-            30000, //dame
+            3000, //dame
             new long[]{175_000_000}, //hp
             new int[]{104}, //map join
             new int[][]{
@@ -447,7 +447,7 @@ public class BossesData {
             "Android 14", //name
             ConstPlayer.TRAI_DAT, //gender
             new short[]{246, 247, 248, -1, -1, -1}, //outfit {head, body, leg, bag, aura, eff}
-            30000, //dame
+            3000, //dame
             new long[]{200_000_000}, //hp
             new int[]{104}, //map join
             new int[][]{
@@ -466,7 +466,7 @@ public class BossesData {
             "Android 15", //name
             ConstPlayer.TRAI_DAT, //gender
             new short[]{261, 262, 263, -1, -1, -1}, //outfit {head, body, leg, bag, aura, eff}
-            29000, //dame
+            2900, //dame
             new long[]{225_000_000}, //hp
             new int[]{104}, //map join
             new int[][]{
@@ -483,7 +483,7 @@ public class BossesData {
             "Số 17 Pic", //name
             ConstPlayer.TRAI_DAT, //gender
             new short[]{237, 238, 239, -1, -1, -1}, //outfit {head, body, leg, bag, aura, eff}
-            50000, //dame
+            5000, //dame
             new long[]{250_000_000}, //hp
             new int[]{97, 98, 99}, //map join
             (int[][]) Util.addArray(FULL_GALICK, FULL_KAMEJOKO), //skill

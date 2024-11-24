@@ -1448,37 +1448,37 @@ public class NPoint {
 
     public long calSubTNSM(long tiemNang) {
         if (this.power >= 1_000_000_000_000L) {
-            tiemNang /= 130;
+            tiemNang /= 1300;
         } else if (this.power >= 900_000_000_000L) {
-            tiemNang /= 120;
+            tiemNang /= 1200;
         } else if (this.power >= 800_000_000_000L) {
-            tiemNang /= 110;
+            tiemNang /= 1100;
         } else if (this.power >= 700_000_000_000L) {
-            tiemNang /= 100;
+            tiemNang /= 1000;
         } else if (this.power >= 600_000_000_000L) {
-            tiemNang /= 90;
+            tiemNang /= 900;
         } else if (this.power >= 500_000_000_000L) {
-            tiemNang /= 80;
+            tiemNang /= 800;
         } else if (this.power >= 400_000_000_000L) {
-            tiemNang /= 70;
+            tiemNang /= 700;
         } else if (this.power >= 300_000_000_000L) {
-            tiemNang /= 60;
+            tiemNang /= 600;
         } else if (this.power >= 250_000_000_000L) {
-            tiemNang /= 50;
+            tiemNang /= 500;
         } else if (this.power >= 200_000_000_000L) {
-            tiemNang /= 40;
+            tiemNang /= 400;
         } else if (this.power >= 160_000_000_000L) {
-            tiemNang /= 30;
+            tiemNang /= 300;
         } else if (this.power >= 120_000_000_000L) {
-            tiemNang /= 20;
+            tiemNang /= 200;
         } else if (this.power >= 80_000_000_000L) {
-            tiemNang /= 10;
+            tiemNang /= 100;
         } else if (this.power >= 60_000_000_000L) {
-            tiemNang *= 1;
+            tiemNang *= 10;
         } else if (this.power >= 40_000_000_000L) {
-            tiemNang *= 5;
-        }
-        if (player.zone.map.mapId >= 156 && player.zone.map.mapId <= 159
+            tiemNang *= 50;
+            }
+            if (player.zone.map.mapId >= 156 && player.zone.map.mapId <= 159
                 || player.zone.map.mapId >= 160 && player.zone.map.mapId <= 163) {
             tiemNang = tiemNang;
         }
