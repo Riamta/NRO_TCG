@@ -1691,7 +1691,7 @@ public class Service {
         if (player.isPet) {
             long tempParam = param;
 
-            tempParam = player.nPoint.calSubTNSM(param);
+            tempParam = player.nPoint.calSubTNSMDT(param);
             player.nPoint.powerUp(tempParam);
             player.nPoint.tiemNangUp(tempParam);
 

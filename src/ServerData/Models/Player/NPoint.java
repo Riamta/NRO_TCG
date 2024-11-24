@@ -1448,35 +1448,35 @@ public class NPoint {
 
     public long calSubTNSM(long tiemNang) {
         if (this.power >= 1_000_000_000_000L) {
-            tiemNang /= 1300;
+            tiemNang /= 130;
         } else if (this.power >= 900_000_000_000L) {
-            tiemNang /= 1200;
+            tiemNang /= 120;
         } else if (this.power >= 800_000_000_000L) {
-            tiemNang /= 1100;
+            tiemNang /= 110;
         } else if (this.power >= 700_000_000_000L) {
-            tiemNang /= 1000;
-        } else if (this.power >= 600_000_000_000L) {
-            tiemNang /= 900;
-        } else if (this.power >= 500_000_000_000L) {
-            tiemNang /= 800;
-        } else if (this.power >= 400_000_000_000L) {
-            tiemNang /= 700;
-        } else if (this.power >= 300_000_000_000L) {
-            tiemNang /= 600;
-        } else if (this.power >= 250_000_000_000L) {
-            tiemNang /= 500;
-        } else if (this.power >= 200_000_000_000L) {
-            tiemNang /= 400;
-        } else if (this.power >= 160_000_000_000L) {
-            tiemNang /= 300;
-        } else if (this.power >= 120_000_000_000L) {
-            tiemNang /= 200;
-        } else if (this.power >= 80_000_000_000L) {
             tiemNang /= 100;
+        } else if (this.power >= 600_000_000_000L) {
+            tiemNang /= 90;
+        } else if (this.power >= 500_000_000_000L) {
+            tiemNang /= 80;
+        } else if (this.power >= 400_000_000_000L) {
+            tiemNang /= 70;
+        } else if (this.power >= 300_000_000_000L) {
+            tiemNang /= 60;
+        } else if (this.power >= 250_000_000_000L) {
+            tiemNang /= 55;
+        } else if (this.power >= 200_000_000_000L) {
+            tiemNang /= 50;
+        } else if (this.power >= 160_000_000_000L) {
+            tiemNang /= 40;
+        } else if (this.power >= 120_000_000_000L) {
+            tiemNang /= 10;
+        } else if (this.power >= 80_000_000_000L) {
+            tiemNang /= 10;
         } else if (this.power >= 60_000_000_000L) {
             tiemNang *= 1;
         } else if (this.power >= 40_000_000_000L) {
-            tiemNang *= 5;
+            tiemNang *= 3;
         }
         if (player.zone.map.mapId >= 156 && player.zone.map.mapId <= 159
                 || player.zone.map.mapId >= 160 && player.zone.map.mapId <= 163) {
@@ -1484,7 +1484,44 @@ public class NPoint {
         }
         return tiemNang;
     }
-
+    public long calSubTNSMDT(long tiemNang) {
+        if (this.power >= 1_000_000_000_000L) {
+            tiemNang /= 130;
+        } else if (this.power >= 900_000_000_000L) {
+            tiemNang /= 120;
+        } else if (this.power >= 800_000_000_000L) {
+            tiemNang /= 110;
+        } else if (this.power >= 700_000_000_000L) {
+            tiemNang /= 100;
+        } else if (this.power >= 600_000_000_000L) {
+            tiemNang /= 90;
+        } else if (this.power >= 500_000_000_000L) {
+            tiemNang /= 80;
+        } else if (this.power >= 400_000_000_000L) {
+            tiemNang /= 70;
+        } else if (this.power >= 300_000_000_000L) {
+            tiemNang /= 60;
+        } else if (this.power >= 250_000_000_000L) {
+            tiemNang /= 55;
+        } else if (this.power >= 200_000_000_000L) {
+            tiemNang /= 50;
+        } else if (this.power >= 160_000_000_000L) {
+            tiemNang /= 40;
+        } else if (this.power >= 120_000_000_000L) {
+            tiemNang /= 30;
+        } else if (this.power >= 80_000_000_000L) {
+            tiemNang /= 20;
+        } else if (this.power >= 60_000_000_000L) {
+            tiemNang *= 1;
+        } else if (this.power >= 40_000_000_000L) {
+            tiemNang *= 3;
+        }
+        if (player.zone.map.mapId >= 156 && player.zone.map.mapId <= 159
+                || player.zone.map.mapId >= 160 && player.zone.map.mapId <= 163) {
+            tiemNang = tiemNang;
+        }
+        return tiemNang;
+    }
     public short getTileHutHp(boolean isMob) {
         if (isMob) {
             return (short) (this.tlHutHp + this.tlHutHpMob);
