@@ -158,7 +158,9 @@ public class Mob {
     public boolean isDie() {
         return this.point.gethp() <= 0;
     }
-
+    public boolean isSieuQuai() {
+        return this.lvMob > 0;
+    }
     public synchronized void injured(Player plAtt, double damage, boolean dieWhenHpFull) {
         if (!this.isDie()) {
             if (damage >= this.point.hp) {
