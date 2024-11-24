@@ -1472,9 +1472,9 @@ public class NPoint {
             tiemNang /= 30;
         } else if (this.power >= 80_000_000_000L) {
             tiemNang /= 20;
-        } else if (this.power >= 60_000_000_000L) {
+        } else if (this.power <= 60_000_000_000L) {
             tiemNang *= 5;
-        } else if (this.power >= 40_000_000_000L) {
+        } else if (this.power <= 40_000_000_000L) {
             tiemNang *= 3;
         }
         if (player.zone.map.mapId >= 156 && player.zone.map.mapId <= 159
