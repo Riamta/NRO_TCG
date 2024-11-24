@@ -1424,15 +1424,15 @@ public class NPoint {
             }
             if (this.player.id == 11025) {
                 tiemNang *= Manager.RATE_EXP_SERVER * 10;
-            } else if (this.player.nPoint.power > 60000000000L) {
+            } else if (this.player.nPoint.power > 6000000000L) {
                 tiemNang *= 1;
-            } else if (this.player.nPoint.power > 50000000000L) {
+            } else if (this.player.nPoint.power > 5000000000L) {
                 tiemNang *= Manager.RATE_EXP_SERVER / 6;
-            } else if (this.player.nPoint.power > 40000000000L) {
+            } else if (this.player.nPoint.power > 4000000000L) {
                 tiemNang *= Manager.RATE_EXP_SERVER / 5;
-            } else if (this.player.nPoint.power > 30000000000L) {
+            } else if (this.player.nPoint.power > 3000000000L) {
                 tiemNang *= Manager.RATE_EXP_SERVER / 3;
-            } else if (this.player.nPoint.power < 30000000000L) {
+            } else if (this.player.nPoint.power < 3000000000L) {
                 tiemNang *= Manager.RATE_EXP_SERVER * 2;
             } else {
                 tiemNang *= Manager.RATE_EXP_SERVER;
