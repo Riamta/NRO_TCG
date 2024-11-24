@@ -524,61 +524,61 @@ public class Mob {
             }
 
         }
-        if (this.zone.map.mapId == 15 || this.zone.map.mapId == 16 || this.zone.map.mapId == 1
-                || this.zone.map.mapId == 2 || this.zone.map.mapId == 8 || this.zone.map.mapId == 9) {
-            if (player.gender == 0) { // skh td
+        // if (this.zone.map.mapId == 15 || this.zone.map.mapId == 16 || this.zone.map.mapId == 1
+        //         || this.zone.map.mapId == 2 || this.zone.map.mapId == 8 || this.zone.map.mapId == 9) {
+        //     if (player.gender == 0) { // skh td
 
-                if (Util.isTrue(1, 500)) { // ao
-                    list.add(new ItemMap(Util.RaitiDoAOSKH(zone, 0, 1, x, player.location.y, player.id)));
-                }
-                if (Util.isTrue(1, 500)) { // quan
-                    list.add(new ItemMap(Util.RaitiDoQUANSKH(zone, 6, 1, x, player.location.y, player.id)));
-                }
-                if (Util.isTrue(1, 500)) { // gang
-                    list.add(new ItemMap(Util.RaitiDoGANGSKH(zone, 21, 1, x, player.location.y, player.id)));
-                }
-                if (Util.isTrue(1, 500)) { // giay
-                    list.add(new ItemMap(Util.RaitiDoGIAYSKH(zone, 27, 1, x, player.location.y, player.id)));
-                }
-                if (Util.isTrue(1, 500)) { // rada
-                    list.add(new ItemMap(Util.RaitiDoRADASKHTD(zone, 12, 1, x, player.location.y, player.id)));
-                }
-            } else if (player.gender == 1) { // skh namec
+        //         if (Util.isTrue(1, 500)) { // ao
+        //             list.add(new ItemMap(Util.RaitiDoAOSKH(zone, 0, 1, x, player.location.y, player.id)));
+        //         }
+        //         if (Util.isTrue(1, 500)) { // quan
+        //             list.add(new ItemMap(Util.RaitiDoQUANSKH(zone, 6, 1, x, player.location.y, player.id)));
+        //         }
+        //         if (Util.isTrue(1, 500)) { // gang
+        //             list.add(new ItemMap(Util.RaitiDoGANGSKH(zone, 21, 1, x, player.location.y, player.id)));
+        //         }
+        //         if (Util.isTrue(1, 500)) { // giay
+        //             list.add(new ItemMap(Util.RaitiDoGIAYSKH(zone, 27, 1, x, player.location.y, player.id)));
+        //         }
+        //         if (Util.isTrue(1, 500)) { // rada
+        //             list.add(new ItemMap(Util.RaitiDoRADASKHTD(zone, 12, 1, x, player.location.y, player.id)));
+        //         }
+        //     } else if (player.gender == 1) { // skh namec
 
-                if (Util.isTrue(1, 500)) { // ao
-                    list.add(new ItemMap(Util.RaitiDoAOSKH(zone, 1, 1, x, player.location.y, player.id)));
-                }
-                if (Util.isTrue(1, 500)) { // quan
-                    list.add(new ItemMap(Util.RaitiDoQUANSKH(zone, 7, 1, x, player.location.y, player.id)));
-                }
-                if (Util.isTrue(1, 500)) { // gang
-                    list.add(new ItemMap(Util.RaitiDoGANGSKH(zone, 22, 1, x, player.location.y, player.id)));
-                }
-                if (Util.isTrue(1, 500)) { // giay
-                    list.add(new ItemMap(Util.RaitiDoGIAYSKH(zone, 28, 1, x, player.location.y, player.id)));
-                }
-                if (Util.isTrue(1, 500)) { // rada
-                    list.add(new ItemMap(Util.RaitiDoRADASKHNM(zone, 12, 1, x, player.location.y, player.id)));
-                }
-            } else if (player.gender == 2) { // skh xayda
+        //         if (Util.isTrue(1, 500)) { // ao
+        //             list.add(new ItemMap(Util.RaitiDoAOSKH(zone, 1, 1, x, player.location.y, player.id)));
+        //         }
+        //         if (Util.isTrue(1, 500)) { // quan
+        //             list.add(new ItemMap(Util.RaitiDoQUANSKH(zone, 7, 1, x, player.location.y, player.id)));
+        //         }
+        //         if (Util.isTrue(1, 500)) { // gang
+        //             list.add(new ItemMap(Util.RaitiDoGANGSKH(zone, 22, 1, x, player.location.y, player.id)));
+        //         }
+        //         if (Util.isTrue(1, 500)) { // giay
+        //             list.add(new ItemMap(Util.RaitiDoGIAYSKH(zone, 28, 1, x, player.location.y, player.id)));
+        //         }
+        //         if (Util.isTrue(1, 500)) { // rada
+        //             list.add(new ItemMap(Util.RaitiDoRADASKHNM(zone, 12, 1, x, player.location.y, player.id)));
+        //         }
+        //     } else if (player.gender == 2) { // skh xayda
 
-                if (Util.isTrue(1, 500)) { // ao
-                    list.add(new ItemMap(Util.RaitiDoAOSKH(zone, 2, 1, x, player.location.y, player.id)));
-                }
-                if (Util.isTrue(1, 500)) { // quan
-                    list.add(new ItemMap(Util.RaitiDoQUANSKH(zone, 8, 1, x, player.location.y, player.id)));
-                }
-                if (Util.isTrue(1, 500)) { // gang
-                    list.add(new ItemMap(Util.RaitiDoGANGSKH(zone, 23, 1, x, player.location.y, player.id)));
-                }
-                if (Util.isTrue(1, 500)) { // giay
-                    list.add(new ItemMap(Util.RaitiDoGIAYSKH(zone, 29, 1, x, player.location.y, player.id)));
-                }
-                if (Util.isTrue(1, 500)) { // rada
-                    list.add(new ItemMap(Util.RaitiDoRADASKHXD(zone, 12, 1, x, player.location.y, player.id)));
-                }
-            }
-        }
+        //         if (Util.isTrue(1, 500)) { // ao
+        //             list.add(new ItemMap(Util.RaitiDoAOSKH(zone, 2, 1, x, player.location.y, player.id)));
+        //         }
+        //         if (Util.isTrue(1, 500)) { // quan
+        //             list.add(new ItemMap(Util.RaitiDoQUANSKH(zone, 8, 1, x, player.location.y, player.id)));
+        //         }
+        //         if (Util.isTrue(1, 500)) { // gang
+        //             list.add(new ItemMap(Util.RaitiDoGANGSKH(zone, 23, 1, x, player.location.y, player.id)));
+        //         }
+        //         if (Util.isTrue(1, 500)) { // giay
+        //             list.add(new ItemMap(Util.RaitiDoGIAYSKH(zone, 29, 1, x, player.location.y, player.id)));
+        //         }
+        //         if (Util.isTrue(1, 500)) { // rada
+        //             list.add(new ItemMap(Util.RaitiDoRADASKHXD(zone, 12, 1, x, player.location.y, player.id)));
+        //         }
+        //     }
+        // }
         // capsule bang
         int nPlSameClan = 0;
         for (Player pl : player.zone.getPlayers()) {
