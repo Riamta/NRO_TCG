@@ -597,11 +597,11 @@ public class Mob {
             }
         }
         // SKH
-        if (this.zone.map.mapId >= 0) {
-            if (Util.isTrue(100, 100)) {
-                list.add(new ItemMap(Util.RaitiDoSKH(zone, 0, 1, x, this.location.y, player.id)));
-            }
-        }
+        // if (this.zone.map.mapId >= 0) {
+        //     if (Util.isTrue(100, 100)) {
+        //         list.add(new ItemMap(Util.RaitiDoSKH(zone, 0, 1, x, this.location.y, player.id)));
+        //     }
+        // }
         /* -------------------------Item Up Su Kien-------------------------------- */
         switch (ConstEvent.EVENT) {
             case 1: // SK MÙA HÈ
