@@ -43,7 +43,7 @@ public class BossesData {
             "Kuku", //name
             ConstPlayer.XAYDA, //gender
             new short[]{159, 160, 161, -1, -1, -1}, //outfit {head, body, leg, bag, aura, eff}
-            90000, //dame
+            5000, //dame
             new long[]{5_000_000}, //hp
             new int[]{68,69,70}, //map join
             new int[][]{
@@ -170,7 +170,7 @@ public class BossesData {
             "Số 4 Guldo", //name
             ConstPlayer.XAYDA, //gender
             new short[]{168, 169, 170, -1, -1, -1}, //outfit {head, body, leg, bag, aura, eff}
-            50000, //dame
+            10000, //dame
             new long[]{25_000_000}, //hp
             new int[]{81,82,83}, //map join
             //           new int[]{86}, //map join
@@ -195,7 +195,7 @@ public class BossesData {
             "Số 3 Recome", //name
             ConstPlayer.XAYDA, //gender
             new short[]{174, 175, 176, -1, -1, -1}, //outfit {head, body, leg, bag, aura, eff}
-            50000, //dame
+            12000, //dame
             new long[]{20_000_000}, //hp
             new int[]{81,82,83}, //map join
             new int[][]{
@@ -553,7 +553,7 @@ public class BossesData {
             "Xên bọ hung",
             ConstPlayer.XAYDA,
             new short[]{228, 229, 230, -1, -1, -1},
-            80000,
+            50000,
             new long[]{325_000_000},
             new int[]{100},
             new int[][]{
@@ -2151,7 +2151,7 @@ public class BossesData {
             "Rồng Naturon 7 Sao", //name
             ConstPlayer.XAYDA, //gender
             new short[]{216, 217, 218, -1, -1, -1}, //outfit {head, body, leg, bag, aura, eff}
-            100000,
+            10000,
             new long[]{500000000}, //hp
             new int[]{91}, //map join
             new int[][]{
@@ -2173,7 +2173,7 @@ public class BossesData {
             "Mabư",
             ConstPlayer.XAYDA,
             new short[]{297, 298, 299, -1, -1, -1},
-            100000,
+            10000,
             new long[]{1000000000L},
             new int[]{120},
             new int[][]{
@@ -2192,7 +2192,7 @@ public class BossesData {
             "Ma Vương Dabura",
             ConstPlayer.XAYDA,
             new short[]{418, 419, 420, -1, -1, -1},
-            100000,
+            10000,
             new long[]{100000000L},
             new int[]{114},
             new int[][]{
