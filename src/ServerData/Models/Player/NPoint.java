@@ -1426,12 +1426,6 @@ public class NPoint {
                 tiemNang *= Manager.RATE_EXP_SERVER * 10;
             } else if (this.player.nPoint.power > 6000000000L) {
                 tiemNang *= 1;
-            } else if (this.player.nPoint.power > 5000000000L) {
-                tiemNang *= Manager.RATE_EXP_SERVER / 6;
-            } else if (this.player.nPoint.power > 4000000000L) {
-                tiemNang *= Manager.RATE_EXP_SERVER / 5;
-            } else if (this.player.nPoint.power > 3000000000L) {
-                tiemNang *= Manager.RATE_EXP_SERVER / 3;
             } else if (this.player.nPoint.power < 3000000000L) {
                 tiemNang *= Manager.RATE_EXP_SERVER * 2;
             } else {
