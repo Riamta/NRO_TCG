@@ -1,4 +1,4 @@
-package ServerData.Models.Map.ListMap;
+package ServerData.Models.Map.bandokhobau;
 import ServerData.Models.Clan.Clan;
 import ServerData.Models.Map.TrapMap;
 import ServerData.Models.Map.Zone;

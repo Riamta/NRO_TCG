@@ -1,4 +1,4 @@
-package ServerData.Models.Map.ListMap;
+package ServerData.Models.Map.bandokhobau;
 import ServerData.Models.Item.Item;
 import ServerData.Boss.ListBoss.BDKB.TrungUyXanhLo;
 import ServerData.Models.Player.Player;
