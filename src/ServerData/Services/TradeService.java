@@ -84,7 +84,7 @@ public class TradeService {
     public void addItemTrade(Player pl, byte index, int quantity) {
        System.out.println("quantity: " + quantity);
        if (pl.getSession() != null && pl.vip <0){
-           Service.gI().sendThongBaoOK(pl, "Khoá giao dịch do không phải là thành viên VIP");
+           Service.gI().sendThongBaoOK(pl, "Khoá giao dịch ưdo không phải là thành viên VIP");
            return;
        }
         if (pl.getSession().actived == 1 && pl.getSession().player.nPoint.power >= 10000000000L) {
