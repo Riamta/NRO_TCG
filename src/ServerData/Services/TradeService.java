@@ -82,11 +82,11 @@ public class TradeService {
     }
 
     public void addItemTrade(Player pl, byte index, int quantity) {
-//        System.out.println("quantity: " + quantity);
-//        if (pl.getSession() != null && pl.isJail()) {
-//            Service.gI().sendThongBaoOK(pl, "ĐI TÙ RÒI CÒN BUÔN BÁN");
-//            return;
-//        }
+       System.out.println("quantity: " + quantity);
+       if (pl.getSession() != null && pl.vip <0){
+           Service.gI().sendThongBaoOK(pl, "Khoá giao dịch do không phải là thành viên VIP");
+           return;
+       }
         if (pl.getSession().actived == 1 && pl.getSession().player.nPoint.power >= 10000000000L) {
         if (this.player2.getSession().actived!=1&& pl.getSession().player.nPoint.power < 10000000000L) {
             this.cancelTrade();
